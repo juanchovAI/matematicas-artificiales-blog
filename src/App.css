@@ -1,0 +1,45 @@
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+.logo {
+  height: 7em;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 0;
+  color: black;
+  position: relative;
+  font-size: 18px;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+nav a.active::after {
+  width: 100%;
+  background-color: #f48b38;
+}
+
+@font-face {
+  font-family: "Titulos";
+  src: url("./assets/fonts/Sugo-Pro-Classic-Regular-trial.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
