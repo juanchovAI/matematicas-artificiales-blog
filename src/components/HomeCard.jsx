@@ -4,9 +4,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import CardActionArea from "@mui/material/CardActionArea";
 
-export default function HomeCard({ imgUrl, title, resumen, key, autor }) {
+export default function HomeCard({ imgUrl, title, resumen, id, autor }) {
   return (
-    <Card key={key} sx={{ maxWidth: 345, borderRadius: "15px", height: 370 }}>
+    <Card key={id} sx={{ maxWidth: 345, borderRadius: "15px", height: 370 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -14,7 +14,7 @@ export default function HomeCard({ imgUrl, title, resumen, key, autor }) {
           image={imgUrl}
           alt="green iguana"
           style={{ padding: 0 }}
-        />
+        />{" "}
         <CardContent>
           <h2 style={{ fontFamily: "titulos" }}>{title}</h2>
 

@@ -10,7 +10,6 @@ const Home = ({ posts }) => {
       <h1 style={{ fontFamily: "Titulos" }}>Artículo destacados</h1>
       <Grid container spacing={2}>
         {posts.map((post) => {
-          console.log(post);
           let resumen = post.fields.content;
           resumen = resumen.substring(0, 100) + "...";
           return (
