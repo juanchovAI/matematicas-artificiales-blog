@@ -90,7 +90,7 @@ function App() {
         </Routes>
       </Box>
 
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
