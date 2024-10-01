@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { createClient } from "contentful";
 import Pronto from "../components/Pronto";
+import { Typography } from "@mui/material";
 
 const client = createClient({
   space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
@@ -44,31 +45,34 @@ const ArticlesByAuthor = ({ posts }) => {
   console.log(autor);
 
   return (
-    <Pronto />
-    // <div>
-    //   <h1 style={{ fontFamily: "titulos" }}>Artículos de {nombreAutor}</h1>
-    //   <Grid container spacing={2}>
-    //     {authorPosts.length > 0 ? (
-    //       authorPosts.map((post) => {
-    //         let resumen = post.fields.content;
-    //         resumen = resumen.substring(0, 100) + "...";
-    //         return (
-    //           <Link size={4} to={`/article/${post.fields.slug}`}>
-    //             <HomeCard
-    //               id={post.sys.id}
-    //               title={post.fields.titulo}
-    //               autor={post.fields.autor.fields.name}
-    //               resumen={resumen}
-    //               imgUrl={post.fields.header.fields.file.url}
-    //             />
-    //           </Link>
-    //         );
-    //       })
-    //     ) : (
-    //       <p>No hay artículos de este autor.</p>
-    //     )}
-    //   </Grid>
-    // </div>
+    <div>
+      <Typography variant="titulo">Artículos de {nombreAutor}</Typography>
+      <Grid
+        container
+        spacing={2}
+        sx={{ marginTop: { xs: "1rem", md: "3rem" } }}
+      >
+        {authorPosts.length > 0 ? (
+          authorPosts.map((post) => {
+            let resumen = post.fields.content;
+            resumen = resumen.substring(0, 100) + "...";
+            return (
+              <Link size={4} to={`/article/${post.fields.slug}`}>
+                <HomeCard
+                  id={post.sys.id}
+                  title={post.fields.titulo}
+                  autor={post.fields.autor.fields.name}
+                  resumen={resumen}
+                  imgUrl={post.fields.header.fields.file.url}
+                />
+              </Link>
+            );
+          })
+        ) : (
+          <p>No hay artículos de este autor.</p>
+        )}
+      </Grid>
+    </div>
   );
 };
 
