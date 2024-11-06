@@ -1,8 +1,8 @@
 import React from "react";
-import { Container, Box, Link } from "@mui/material";
+import { Container, Box, Link, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <Box
       component="footer"
@@ -25,7 +25,7 @@ const Footer = () => {
             size={4}
             style={{ flexDirection: "column", alignItems: "center" }}
           >
-            <h2>Enlaces</h2>
+            <Typography variant="h6">Enlaces</Typography>
             <ul style={{ listStyle: "none", padding: 0 }}>
               <li>
                 <Link href="#" color="inherit">
@@ -52,12 +52,14 @@ const Footer = () => {
             size={4}
             style={{ flexDirection: "column", alignItems: "center" }}
           >
-            <h2>Información</h2>
-            <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-              archivos de texto. Lorem Ipsum ha sido el texto de relleno
-              estándar de las industrias desde el año 1500, cuando un impresor
-            </p>
+            <Typography variant="h6">Información</Typography>
+            <Typography>
+              Matemáticas Artificiales es un blog donde exploramos el fascinante
+              mundo de la inteligencia artificial, las matemáticas y el análisis
+              de datos de manera simple y práctica. Únete a nuestra comunidad de
+              aprendizaje para descubrir cómo los números y algoritmos pueden
+              resolver problemas del mundo real. 💻🔢
+            </Typography>
           </Grid>
 
           {/* Sección de Redes Sociales */}
@@ -67,7 +69,7 @@ const Footer = () => {
             size={4}
             style={{ flexDirection: "column", alignItems: "center" }}
           >
-            <h2>Síguenos</h2>
+            <Typography variant="h6">Síguenos</Typography>
             <ul style={{ listStyle: "none", padding: 0 }}>
               <li>
                 <Link href="#" color="inherit">

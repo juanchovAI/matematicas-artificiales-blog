@@ -36,7 +36,7 @@ export const fuente = {
 
 export const light_theme = createTheme({
   typography: {
-    titulo: {
+    h4: {
       lineHeight: 1.1,
       fontFamily: "Titulos",
       color: fuente.light,
@@ -64,7 +64,7 @@ export const light_theme = createTheme({
     MuiTypography: {
       defaultProps: {
         variantMapping: {
-          titulo: "h1",
+          h4: "h1",
         },
       },
     },
@@ -73,7 +73,7 @@ export const light_theme = createTheme({
 
 export const main_theme = createTheme({
   typography: {
-    titulo: {
+    h4: {
       lineHeight: 1.1,
       fontFamily: "Titulos",
       color: fuente.main,
@@ -101,7 +101,7 @@ export const main_theme = createTheme({
     MuiTypography: {
       defaultProps: {
         variantMapping: {
-          titulo: "h1",
+          h4: "h1",
         },
       },
     },
@@ -113,7 +113,7 @@ export const dark_theme = createTheme({
     mode: "dark",
   },
   typography: {
-    titulo: {
+    h4: {
       lineHeight: 1.1,
       fontFamily: "Titulos",
       color: fuente.dark,
@@ -123,6 +123,9 @@ export const dark_theme = createTheme({
       "@media (min-width:600px)": {
         fontSize: "3.52rem",
       },
+    },
+    body1: {
+      color: "white",
     },
   },
 
@@ -141,7 +144,7 @@ export const dark_theme = createTheme({
     MuiTypography: {
       defaultProps: {
         variantMapping: {
-          titulo: "h1",
+          h4: "h1",
         },
       },
     },

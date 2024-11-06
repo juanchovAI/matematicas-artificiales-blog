@@ -46,7 +46,7 @@ const client = createClient({
 
 const App = () => {
   const [posts, setPosts] = useState([]);
-  const [theme, setTheme] = useState("main");
+  const [theme, setTheme] = useState("dark");
   const [drawerOpen, setDrawerOpen] = useState(false); // Estado para controlar el menú móvil
 
   // Obtener posts desde Contentful
@@ -319,18 +319,18 @@ const App = () => {
             }}
           >
             <Routes>
-              <Route path="/" element={<Home posts={posts} />} />
+              <Route path="/" element={<Home posts={posts} theme={theme} />} />
               <Route
                 path="/author/:authorName"
                 element={<ArticlesByAuthor posts={posts} />}
               />
               <Route
                 path="/filter/:filterType/:filterValue"
-                element={<FilteredArticles posts={posts} />}
+                element={<FilteredArticles />}
               />
               <Route
                 path="/article/:slug"
-                element={<Article posts={posts} />}
+                element={<Article posts={posts} theme={theme} />}
               />
             </Routes>
           </Box>
