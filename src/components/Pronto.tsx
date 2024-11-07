@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Pronto = () => {
+export const Pronto: React.FC = () => {
   return (
     <h1
       style={{

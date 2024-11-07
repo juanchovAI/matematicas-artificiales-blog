@@ -4,7 +4,13 @@ import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
-const components = {};
+import { Typography } from "@mui/material";
+
+const components = {
+  p: (props) => <Typography variant="body1" paragraph {...props} />,
+
+  // Otros elementos que desees personalizar
+};
 
 const MDXContent = ({ children }) => (
   <MDXProvider components={components}>
